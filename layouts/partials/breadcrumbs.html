@@ -1,0 +1,20 @@
+{{- /* 
+  De https://discourse.gohugo.io/t/implementing-breadcrumb-navigation-in-hugo/1048/38.
+  Licencia desconocida.
+  */ -}}
+<ol class="breadcrumb">
+  {{ template "breadcrumb" dict "currentPage" .Page "id" .File.UniqueID }}
+</ol>
+
+{{ define "breadcrumb" }}
+  {{ if .currentPage.Parent }}
+    {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
+  {{ end }}
+  <li>
+    {{ if eq .id .currentPage.File.UniqueID }}
+      {{ .currentPage.Title }}
+    {{ else }}
+      <a href="{{ .currentPage.RelPermalink }}">{{ .currentPage.Title }}</a>
+    {{ end }}
+  </li>
+{{ end }}

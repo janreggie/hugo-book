@@ -1,11 +1,27 @@
 /* You can add custom styles here. */
 
 // @import "plugins/numbered";
+
 .poem {
     max-width: 80%;
     margin: auto;
 }
-
 .stanza {
     white-space: pre-wrap;
+}
+
+// Para partials/breadcrumbs.html.
+// De https://www.educative.io/edpresso/how-to-make-a-breadcrumb-in-html---css.
+//
+.breadcrumb{
+  padding: 10px 16px;
+  list-style: none;
+}
+.breadcrumb li{
+  display: inline;
+  font-size: 18px;
+  }
+.breadcrumb li+li:before{
+  padding: 8px;
+  content: ">>";
 }

@@ -78,10 +78,17 @@
 
 {{ define "main" }}
   <article class="markdown">
+    {{ partial "breadcrumbs" . }}
+    {{ template "portada" . }}
+    {{ with .Page.Title }}<h1>{{ . }}</h1>{{ end }}
     {{- .Content -}}
   </article>
 {{ end }}
 
 {{ define "toc" }}
   {{ partial "docs/toc" . }}
+{{ end }}
+
+{{ define "portada" }}
+  TODO: Añadir foto de portada aquí.
 {{ end }}
