@@ -1,0 +1,15 @@
+// partials/breadcrumbs
+// See https://www.educative.io/edpresso/how-to-make-a-breadcrumb-in-html---css.
+//
+.breadcrumb{
+  padding: 10px 16px;
+  list-style: none;
+}
+.breadcrumb li{
+  display: inline;
+  font-size: 18px;
+  }
+.breadcrumb li+li:before{
+  padding: 8px;
+  content: ">>";
+}
