@@ -1,1 +1,1 @@
-<div class="poem">{{ .Inner }}</div>
+<article class='poem{{with .Get "class"}} {{.}}{{end}}' {{with .Get "id"}}id='{{.}}'{{end}}>{{ .Inner | markdownify }}</article>
