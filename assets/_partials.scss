@@ -2,14 +2,17 @@
 // See https://www.educative.io/edpresso/how-to-make-a-breadcrumb-in-html---css.
 //
 .breadcrumb{
-  padding: 10px 16px;
+  border-top: 1px solid;
+  padding-top: 1em;
+  padding-left: 0em;
   list-style: none;
 }
-.breadcrumb li{
-  display: inline;
-  font-size: 18px;
-  }
+
+.breadcrumb li.book-section-flat {
+  margin: 1em 0em;
+}
+
 .breadcrumb li+li:before{
-  padding: 8px;
-  content: ">>";
+  // padding: 8px;
+  content: "↳";
 }

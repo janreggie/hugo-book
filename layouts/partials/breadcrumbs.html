@@ -1,6 +1,5 @@
 {{- /* 
-  De https://discourse.gohugo.io/t/implementing-breadcrumb-navigation-in-hugo/1048/38.
-  Licencia desconocida.
+  Adapted from https://discourse.gohugo.io/t/implementing-breadcrumb-navigation-in-hugo/1048/38.
   */ -}}
 <ol class="breadcrumb">
   {{ template "breadcrumb" dict "currentPage" .Page "id" .File.UniqueID }}
@@ -10,7 +9,7 @@
   {{ if .currentPage.Parent }}
     {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
   {{ end }}
-  <li>
+  <li class="book-section-flat">
     {{ if eq .id .currentPage.File.UniqueID }}
       {{ .currentPage.Title }}
     {{ else }}
